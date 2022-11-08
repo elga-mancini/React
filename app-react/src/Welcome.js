@@ -8,7 +8,7 @@ export class Welcome extends React.Component {
         {this.props.name == "John" ? (
           <div>
             <p>Welcome, {this.props.name}</p>
-            <Age age={51} />
+            <Age age={7} />
           </div>
         ) : 
         (
