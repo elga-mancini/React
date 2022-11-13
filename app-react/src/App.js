@@ -1,26 +1,17 @@
 import React from "react";
+import { Counter } from "./Counter";
+import { Welcome } from "./Welcome";
 
-export class Counter extends React.Component {
-  state = {
-    count: this.props.initialValue,
-  };
-
-  constructor(props) {
-    super(props);
-
-    setInterval(() => {
-      this.setState((state) => {
-        return {
-          count: this.state.count + this.props.incrementAmount,
-        };
-      });
-    }, this.props.incrementInterval);
-  }
-
+export class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Count: {this.state.count}</h1>
+        <Welcome name="John" />
+        <Counter
+          initialValue={0}
+          incrementInterval={1000}
+          incrementAmount={1}
+        />
       </div>
     );
   }
